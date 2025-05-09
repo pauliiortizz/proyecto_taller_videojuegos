@@ -5,7 +5,7 @@ public class PlayerManager : MonoBehaviour
     public GameObject[] keyIcons; // Imágenes de llaves en la UI
     public GameObject amuletIcon; // Imágen de amuleto en la UI
     private int keyNumber = 0; // Cont de llaves
-    private bool HaveAmulet = false; // Bandera para verificar si el jugador tiene el amuleto
+    public bool HaveAmulet = false; // Bandera para verificar si el jugador tiene el amuleto
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -26,7 +26,7 @@ public class PlayerManager : MonoBehaviour
             HaveAmulet=false; // Cambia la bandera a falso
         }
     }
-    void GiveKey()
+    public void GiveKey()
     {
         keyIcons[keyNumber].SetActive(true); // Activa solo la primera llave
         keyNumber++; // Incrementa el número de llaves

@@ -39,17 +39,28 @@ public class dialogos : MonoBehaviour
         textoNombre.text = dialogosArray[indiceDialogoActual].nombre;
     }
 
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        Debug.Log("El jugador ha entrado en el trigger");
+   // En dialogos.cs, modifica el OnTriggerEnter2D
+void OnTriggerEnter2D(Collider2D other)
+{
+    Debug.Log("El jugador ha entrado en el trigger");
 
-        if (other.CompareTag("Player"))
+    if (other.CompareTag("Player"))
+    {
+        // Mostrar diálogo
+        indiceDialogoActual = 0;
+        canvas.SetActive(true);
+        MostrarDialogoActual();
+        
+        // Notificar al PlayerManager sobre la interacción con la estatua
+        PlayerManager player = other.GetComponent<PlayerManager>();
+        if (player != null && player.HaveAmulet)
         {
-            indiceDialogoActual = 0;
-            canvas.SetActive(true);
-            MostrarDialogoActual();
+            player.GiveKey();
+            player.HaveAmulet = false;
+            player.amuletIcon.SetActive(false);
         }
     }
+}
 
     void OnTriggerExit2D(Collider2D other)
     {
