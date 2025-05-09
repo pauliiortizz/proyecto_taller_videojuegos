@@ -2,14 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-//when something get into the alta, make the runes glow
 namespace Cainos.PixelArtTopDown_Basic
 {
-
     public class PropsAltar : MonoBehaviour
     {
         public List<SpriteRenderer> runes;
         public float lerpSpeed;
+        public string targetTag = "Box";  // Etiqueta que debe tener la caja
 
         private Color curColor;
         private Color targetColor;
@@ -17,16 +16,26 @@ namespace Cainos.PixelArtTopDown_Basic
         private void Awake()
         {
             targetColor = runes[0].color;
+            targetColor.a = 0.0f;  // Empieza invisible
+            curColor = targetColor;
         }
 
         private void OnTriggerEnter2D(Collider2D other)
         {
-            targetColor.a = 1.0f;
+            // Solo activa las runas si el objeto tiene la etiqueta correcta
+            if (other.CompareTag(targetTag))
+            {
+                targetColor.a = 1.0f;
+            }
         }
 
         private void OnTriggerExit2D(Collider2D other)
         {
-            targetColor.a = 0.0f;
+            // Solo desactiva las runas si el objeto que sale es la caja
+            if (other.CompareTag(targetTag))
+            {
+                targetColor.a = 0.0f;
+            }
         }
 
         private void Update()
