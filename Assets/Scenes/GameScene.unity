@@ -14645,6 +14645,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 781189522}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &782083223 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7320450072257154720, guid: 27bd9a7c31660294fbf271ad85dc5310,
+    type: 3}
+  m_PrefabInstance: {fileID: 1283299474}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &784359752
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16126,6 +16132,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1177272032}
     m_Modifications:
+    - target: {fileID: 2055102311959635369, guid: 6d9a1504606c57143b1a8bbc2249aabe,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wizard
+      objectReference: {fileID: 0}
+    - target: {fileID: 2055102311959635374, guid: 6d9a1504606c57143b1a8bbc2249aabe,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2055102311959635375, guid: 6d9a1504606c57143b1a8bbc2249aabe,
         type: 3}
       propertyPath: m_RootOrder
@@ -25240,6 +25256,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1454356090134539237, guid: 27bd9a7c31660294fbf271ad85dc5310,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4491204259313044816, guid: 27bd9a7c31660294fbf271ad85dc5310,
         type: 3}
       propertyPath: m_Pivot.x
@@ -25349,6 +25370,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: CanvasInventary
+      objectReference: {fileID: 0}
+    - target: {fileID: 7320450072257154720, guid: 27bd9a7c31660294fbf271ad85dc5310,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -35420,9 +35446,9 @@ MonoBehaviour:
   - {fileID: 1283299477}
   - {fileID: 1283299476}
   - {fileID: 1283299475}
-  amuletIcon: {fileID: 8425425570200341835, guid: 359a6a25bec88d446bfc5f9e937ade4e,
-    type: 3}
+  amuletIcon: {fileID: 782083223}
   HaveAmulet: 0
+  HaveKeys: 0
 --- !u!1001 &5724624599686979093
 PrefabInstance:
   m_ObjectHideFlags: 0
