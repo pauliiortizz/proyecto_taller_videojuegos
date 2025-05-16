@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 196785578047942838}
   - component: {fileID: 7757027474695908255}
   - component: {fileID: 3211404744601454117}
-  m_Layer: 0
+  m_Layer: 20
   m_Name: Mago
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 591652133550943163}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.075, y: -7.1, z: 0}
+  m_LocalPosition: {x: 5.04, y: -6.78, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1869315837
   m_SortingLayer: 1
-  m_SortingOrder: 2
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: 07e711b9600b3a74895a37b2d534f474, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -132,5 +132,5 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 5.12, y: 5.12}
+  m_Size: {x: 1.3, y: 2}
   m_EdgeRadius: 0
