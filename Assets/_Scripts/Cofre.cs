@@ -4,28 +4,52 @@ using UnityEngine.EventSystems;
 
 public class ChestController : MonoBehaviour
 {
-    public GameObject codeCanvas;
-    public TMP_InputField codeInput;
-    public TextMeshProUGUI errorMessage;
-    public string correctCode = "1234";
+    public GameObject codeCanvasPrefab;
+    private GameObject codeCanvasInstance;
+    private TMP_InputField codeInput;
+    private TextMeshProUGUI errorMessage;
+    private TextMeshProUGUI instructionText;
+    public string correctCode = "5";
 
     private bool isCanvasActive = false;
-
-    private void Start()
-    {
-        codeCanvas.SetActive(false);
-        errorMessage.gameObject.SetActive(false);
-    }
+    private PlayerManager player;
 
     private void OnMouseDown()
     {
+        // Obtener el PlayerManager si no está asignado
+        if (player == null)
+        {
+            GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
+            if (playerObj != null)
+            {
+                player = playerObj.GetComponent<PlayerManager>();
+            }
+        }
+
         if (!isCanvasActive)
         {
-            codeCanvas.SetActive(true);
+            if (codeCanvasInstance == null)
+            {
+                codeCanvasInstance = Instantiate(codeCanvasPrefab);
+                codeInput = codeCanvasInstance.transform.Find("Panel/InputField (TMP)").GetComponent<TMP_InputField>();
+                errorMessage = codeCanvasInstance.transform.Find("Panel/ErrorMessage").GetComponent<TextMeshProUGUI>();
+                instructionText = codeCanvasInstance.transform.Find("Panel/Text (TMP)").GetComponent<TextMeshProUGUI>();
+
+                errorMessage.gameObject.SetActive(false);
+                
+                var closeButton = codeCanvasInstance.transform.Find("Panel/CloseButton").GetComponent<UnityEngine.UI.Button>();
+                closeButton.onClick.AddListener(CloseCanvas);
+
+                var confirmButton = codeCanvasInstance.transform.Find("Panel/ConfirmButton").GetComponent<UnityEngine.UI.Button>();
+                confirmButton.onClick.AddListener(CheckCode);
+            }
+
+            codeCanvasInstance.SetActive(true);
             isCanvasActive = true;
             errorMessage.gameObject.SetActive(false);
-            codeInput.text = "";  // Limpia el campo de entrada
-            codeInput.ActivateInputField();  // Garantiza el foco al abrir
+            instructionText.text = "Ingresa el código";
+            codeInput.text = "";
+            codeInput.ActivateInputField();
         }
     }
 
@@ -34,22 +58,23 @@ public class ChestController : MonoBehaviour
         if (codeInput.text == correctCode)
         {
             CloseCanvas();
+            if (player != null) // Verificar que player no sea null
+            {
+                player.GiveKey();
+            }
         }
         else
         {
             errorMessage.text = "Código incorrecto. Intenta de nuevo.";
             errorMessage.gameObject.SetActive(true);
-            codeInput.text = "";  // Limpia el campo
-
-            // 🔄 Actualiza el foco para poder escribir de nuevo
-            codeInput.DeactivateInputField();  // Quita el foco
-            codeInput.ActivateInputField();    // Lo vuelve a activar
+            codeInput.text = "";
+            codeInput.ActivateInputField();
         }
     }
 
     public void CloseCanvas()
     {
-        codeCanvas.SetActive(false);
+        codeCanvasInstance.SetActive(false);
         isCanvasActive = false;
     }
 }

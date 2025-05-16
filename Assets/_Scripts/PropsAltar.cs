@@ -12,12 +12,24 @@ namespace Cainos.PixelArtTopDown_Basic
 
         private Color curColor;
         private Color targetColor;
+        private PlayerManager player;
 
         private void Awake()
         {
             targetColor = runes[0].color;
             targetColor.a = 0.0f;  // Empieza invisible
             curColor = targetColor;
+
+            // Buscar al jugador al inicio (asume que tiene el tag "Player")
+            GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
+            if (playerObj != null)
+            {
+                player = playerObj.GetComponent<PlayerManager>();
+            }
+            else
+            {
+                Debug.LogError("No se encontró un objeto con tag 'Player'");
+            }
         }
 
         private void OnTriggerEnter2D(Collider2D other)
@@ -25,6 +37,14 @@ namespace Cainos.PixelArtTopDown_Basic
             // Solo activa las runas si el objeto tiene la etiqueta correcta
             if (other.CompareTag(targetTag))
             {
+                if (player != null) // Verificar que player no sea null
+                {
+                    player.GiveKey();
+                }
+                else
+                {
+                    Debug.LogError("PlayerManager no asignado en PropsAltar");
+                }
                 targetColor.a = 1.0f;
             }
         }
