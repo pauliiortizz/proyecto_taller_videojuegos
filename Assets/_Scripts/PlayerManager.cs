@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class PlayerManager : MonoBehaviour
 {
@@ -12,7 +13,7 @@ public class PlayerManager : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        
+
         if (collision.gameObject.CompareTag("Amulet"))
         {
             GiveAmulet(); // Llama a la función para dar el amuleto
@@ -26,16 +27,17 @@ public class PlayerManager : MonoBehaviour
             amuletIcon.SetActive(false); //Oculta el amuleto en la UI
             GiveKey(); // Llama a la función para dar la llave
             Debug.Log("Llave obtenida"); // Mensaje de depuración
-            HaveAmulet=false; // Cambia la bandera a falso
+            HaveAmulet = false; // Cambia la bandera a falso
         }
 
         if (collision.gameObject.CompareTag("Wizard") && HaveKeys)
         {
-            for (; keyNumber >= 0; keyNumber--)
+            for (int i = 0; i > 2; i++)
             {
-                keyIcons[keyNumber].SetActive(false); // Desactiva todas las llaves
+                keyIcons[i].SetActive(false); // Desactiva todas las llaves
             }
             Debug.Log("Llaves borradas"); // Mensaje de depuración
+            StartCoroutine(PausaDeDosSegundos()); // Llama a la función de pausa
             SceneManager.LoadScene(2); //Cambia la escena al final
         }
     }
@@ -53,5 +55,12 @@ public class PlayerManager : MonoBehaviour
     void GiveAmulet()
     {
         amuletIcon.SetActive(true); //Muestra el amuleto en la UI
+    }
+    
+    IEnumerator PausaDeDosSegundos()
+    {
+        Debug.Log("Antes de la pausa");
+        yield return new WaitForSeconds(5f); // Pausa de 2 segundos
+        Debug.Log("Después de la pausa");
     }
 }
