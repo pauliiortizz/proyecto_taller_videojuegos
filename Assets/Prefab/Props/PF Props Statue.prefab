@@ -497,10 +497,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 7127024797321433093}
   dialogosArray:
-  - texto: ola bro
-    nombre: vieja
-  - texto: ki onda
-    nombre: vieja
+  - texto: Brilla con luz tenue
+    nombre: 'Estatua '
+  - texto: Gracias, joven. Has devuelto mi dignidad. Esta llave te pertenece.
+    nombre: Estatua
   nextButton: {fileID: 535830654223008513}
   textoDialogo: {fileID: 4558243058426929154}
   textoNombre: {fileID: 2703551082098163488}
