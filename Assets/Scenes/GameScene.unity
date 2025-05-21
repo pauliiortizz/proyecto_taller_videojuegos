@@ -10360,6 +10360,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1048837928}
     m_Modifications:
+    - target: {fileID: 5295560636912337700, guid: d730038d263986f4dac93230e1dd62b0,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7947911505737750448, guid: d730038d263986f4dac93230e1dd62b0,
         type: 3}
       propertyPath: m_RootOrder
@@ -10428,12 +10433,17 @@ PrefabInstance:
     - target: {fileID: 7947911505737750455, guid: d730038d263986f4dac93230e1dd62b0,
         type: 3}
       propertyPath: m_Name
-      value: PF Props Statue
+      value: Estatua
       objectReference: {fileID: 0}
     - target: {fileID: 7947911505737750455, guid: d730038d263986f4dac93230e1dd62b0,
         type: 3}
       propertyPath: m_Layer
       value: 22
+      objectReference: {fileID: 0}
+    - target: {fileID: 7947911505737750455, guid: d730038d263986f4dac93230e1dd62b0,
+        type: 3}
+      propertyPath: m_TagString
+      value: Dialog
       objectReference: {fileID: 0}
     - target: {fileID: 7947911505844789836, guid: d730038d263986f4dac93230e1dd62b0,
         type: 3}
@@ -13976,12 +13986,17 @@ PrefabInstance:
     - target: {fileID: 7947911505737750455, guid: c5bdca1933fde624698bb8c6d6daa44b,
         type: 3}
       propertyPath: m_Name
-      value: PF Props Altar
+      value: Runas
       objectReference: {fileID: 0}
     - target: {fileID: 7947911505737750455, guid: c5bdca1933fde624698bb8c6d6daa44b,
         type: 3}
       propertyPath: m_Layer
       value: 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 7947911505737750455, guid: c5bdca1933fde624698bb8c6d6daa44b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Dialog
       objectReference: {fileID: 0}
     - target: {fileID: 7947911505844789836, guid: c5bdca1933fde624698bb8c6d6daa44b,
         type: 3}
@@ -34178,6 +34193,74 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf462882706828c44a4465986b6fb8d2, type: 3}
+--- !u!1001 &1266082250076391081
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1917552682260077777, guid: 6ab256b6c13d4714a9d6b127d3efeaa8,
+        type: 3}
+      propertyPath: m_Name
+      value: NarrativeManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 4692452849135430085, guid: 6ab256b6c13d4714a9d6b127d3efeaa8,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.9523426
+      objectReference: {fileID: 0}
+    - target: {fileID: 4692452849135430085, guid: 6ab256b6c13d4714a9d6b127d3efeaa8,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5.2226944
+      objectReference: {fileID: 0}
+    - target: {fileID: 4692452849135430085, guid: 6ab256b6c13d4714a9d6b127d3efeaa8,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.0352173
+      objectReference: {fileID: 0}
+    - target: {fileID: 4692452849135430085, guid: 6ab256b6c13d4714a9d6b127d3efeaa8,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4692452849135430085, guid: 6ab256b6c13d4714a9d6b127d3efeaa8,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4692452849135430085, guid: 6ab256b6c13d4714a9d6b127d3efeaa8,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4692452849135430085, guid: 6ab256b6c13d4714a9d6b127d3efeaa8,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4692452849135430085, guid: 6ab256b6c13d4714a9d6b127d3efeaa8,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4692452849135430085, guid: 6ab256b6c13d4714a9d6b127d3efeaa8,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4692452849135430085, guid: 6ab256b6c13d4714a9d6b127d3efeaa8,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6ab256b6c13d4714a9d6b127d3efeaa8, type: 3}
 --- !u!4 &1336196914018830829 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8228059593326255414, guid: 84d669757910f1f488023c92e71fcad5,
@@ -34793,7 +34876,12 @@ PrefabInstance:
     - target: {fileID: 985672034832445486, guid: e06e2a2da0b8e014ea18ce61be25937d,
         type: 3}
       propertyPath: m_Name
-      value: PF Props Chest
+      value: Cofre
+      objectReference: {fileID: 0}
+    - target: {fileID: 985672034832445486, guid: e06e2a2da0b8e014ea18ce61be25937d,
+        type: 3}
+      propertyPath: m_TagString
+      value: Dialog
       objectReference: {fileID: 0}
     - target: {fileID: 3009653727595959565, guid: e06e2a2da0b8e014ea18ce61be25937d,
         type: 3}
@@ -34851,6 +34939,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 5602329015596567735, guid: 050004a7a2f3fcc45910c25250db2919,
         type: 3}
+    - target: {fileID: 9046608442876432691, guid: e06e2a2da0b8e014ea18ce61be25937d,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -35329,6 +35422,56 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1925814259248185950, guid: ef67ba864d1ecc042b5f4cf48455c0a6,
+        type: 3}
+      propertyPath: dialogosArray.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1925814259248185950, guid: ef67ba864d1ecc042b5f4cf48455c0a6,
+        type: 3}
+      propertyPath: dialogosArray.Array.data[3].texto
+      value: Un poco de limpieza no le viene mal... Muchas gracias por la llave!!
+      objectReference: {fileID: 0}
+    - target: {fileID: 1925814259248185950, guid: ef67ba864d1ecc042b5f4cf48455c0a6,
+        type: 3}
+      propertyPath: dialogosArray.Array.data[4].texto
+      value: "Estas runas... algo falta aqu\xED. Siento que algo debe colocarse encima."
+      objectReference: {fileID: 0}
+    - target: {fileID: 1925814259248185950, guid: ef67ba864d1ecc042b5f4cf48455c0a6,
+        type: 3}
+      propertyPath: dialogosArray.Array.data[5].texto
+      value: "\xA1Funcion\xF3! \xA1Y apareci\xF3 una llave!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1925814259248185950, guid: ef67ba864d1ecc042b5f4cf48455c0a6,
+        type: 3}
+      propertyPath: dialogosArray.Array.data[6].texto
+      value: Muchas gracias por la llave!!
+      objectReference: {fileID: 0}
+    - target: {fileID: 1925814259248185950, guid: ef67ba864d1ecc042b5f4cf48455c0a6,
+        type: 3}
+      propertyPath: dialogosArray.Array.data[0].keyToEvaluate
+      value: Cofre
+      objectReference: {fileID: 0}
+    - target: {fileID: 1925814259248185950, guid: ef67ba864d1ecc042b5f4cf48455c0a6,
+        type: 3}
+      propertyPath: dialogosArray.Array.data[2].keyToEvaluate
+      value: Estatua
+      objectReference: {fileID: 0}
+    - target: {fileID: 1925814259248185950, guid: ef67ba864d1ecc042b5f4cf48455c0a6,
+        type: 3}
+      propertyPath: dialogosArray.Array.data[3].keyToEvaluate
+      value: Estatua
+      objectReference: {fileID: 0}
+    - target: {fileID: 1925814259248185950, guid: ef67ba864d1ecc042b5f4cf48455c0a6,
+        type: 3}
+      propertyPath: dialogosArray.Array.data[4].keyToEvaluate
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1925814259248185950, guid: ef67ba864d1ecc042b5f4cf48455c0a6,
+        type: 3}
+      propertyPath: dialogosArray.Array.data[6].keyToEvaluate
+      value: Estatua
+      objectReference: {fileID: 0}
     - target: {fileID: 5628018141983903104, guid: ef67ba864d1ecc042b5f4cf48455c0a6,
         type: 3}
       propertyPath: m_Name
@@ -35389,7 +35532,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 6561961119750238673, guid: ef67ba864d1ecc042b5f4cf48455c0a6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 3970072407792920533, guid: ef67ba864d1ecc042b5f4cf48455c0a6, type: 3}
+    - {fileID: 6475319314514484721, guid: ef67ba864d1ecc042b5f4cf48455c0a6, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -36255,3 +36405,4 @@ SceneRoots:
   - {fileID: 1849427773}
   - {fileID: 1691502415}
   - {fileID: 1283299474}
+  - {fileID: 1266082250076391081}

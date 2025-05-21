@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Amulet
   - Statue
+  - Box
+  - Dialog
   layers:
   - Default
   - TransparentFX
