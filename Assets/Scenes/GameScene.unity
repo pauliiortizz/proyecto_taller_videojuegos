@@ -10443,7 +10443,7 @@ PrefabInstance:
     - target: {fileID: 7947911505737750455, guid: d730038d263986f4dac93230e1dd62b0,
         type: 3}
       propertyPath: m_TagString
-      value: Dialog
+      value: Statue
       objectReference: {fileID: 0}
     - target: {fileID: 7947911505844789836, guid: d730038d263986f4dac93230e1dd62b0,
         type: 3}
@@ -13996,7 +13996,7 @@ PrefabInstance:
     - target: {fileID: 7947911505737750455, guid: c5bdca1933fde624698bb8c6d6daa44b,
         type: 3}
       propertyPath: m_TagString
-      value: Dialog
+      value: Runa
       objectReference: {fileID: 0}
     - target: {fileID: 7947911505844789836, guid: c5bdca1933fde624698bb8c6d6daa44b,
         type: 3}
@@ -25365,6 +25365,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: CanvasInventary
       objectReference: {fileID: 0}
+    - target: {fileID: 6544082040172617942, guid: 27bd9a7c31660294fbf271ad85dc5310,
+        type: 3}
+      propertyPath: m_TagString
+      value: Cofre
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -34881,7 +34886,7 @@ PrefabInstance:
     - target: {fileID: 985672034832445486, guid: e06e2a2da0b8e014ea18ce61be25937d,
         type: 3}
       propertyPath: m_TagString
-      value: Dialog
+      value: Cofre
       objectReference: {fileID: 0}
     - target: {fileID: 3009653727595959565, guid: e06e2a2da0b8e014ea18ce61be25937d,
         type: 3}
