@@ -10,6 +10,7 @@ TagManager:
   - Dialog
   - Cofre
   - Runa
+  - Wizard
   layers:
   - Default
   - TransparentFX
