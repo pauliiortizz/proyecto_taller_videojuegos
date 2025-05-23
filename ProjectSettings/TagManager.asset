@@ -8,6 +8,8 @@ TagManager:
   - Statue
   - Box
   - Dialog
+  - Cofre
+  - Runa
   layers:
   - Default
   - TransparentFX

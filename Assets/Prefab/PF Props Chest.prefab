@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3543716109990376287}
   m_Layer: 20
   m_Name: PF Props Chest
-  m_TagString: Untagged
+  m_TagString: Cofre
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
