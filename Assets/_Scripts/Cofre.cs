@@ -61,6 +61,7 @@ public class ChestController : MonoBehaviour
             if (player != null) // Verificar que player no sea null
             {
                 player.GiveKey();
+                NarrativeManager.instance.SetPearl("Cofre", true);
             }
         }
         else

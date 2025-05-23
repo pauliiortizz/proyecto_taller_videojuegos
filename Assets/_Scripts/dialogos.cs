@@ -59,7 +59,7 @@ public class dialogos : MonoBehaviour
     {
         Debug.Log("El jugador ha entrado en el trigger");
 
-        if (other.CompareTag("Dialog"))
+        if (other.CompareTag("Statue") || other.CompareTag("Cofre") || other.CompareTag("Runa"))
         {
             if(other.gameObject.name == "Cofre") //ojoal guardar escena y q no tenga el mismo nombr eel cofre
             {

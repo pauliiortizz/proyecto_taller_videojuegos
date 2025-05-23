@@ -16,6 +16,7 @@ public class PlayerManager : MonoBehaviour
             Destroy(collision.gameObject); // Destruye el objeto amuleto recogido
             Debug.Log("Amuleto recogido"); // Mensaje de depuración
             HaveAmulet = true; // Cambia la bandera a verdadero
+            NarrativeManager.instance.SetPearl("Estatua", true);
         }
 
         if (collision.gameObject.CompareTag("Statue") && HaveAmulet)
