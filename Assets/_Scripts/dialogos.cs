@@ -59,7 +59,7 @@ public class dialogos : MonoBehaviour
     {
         Debug.Log("El jugador ha entrado en el trigger");
 
-        if (other.CompareTag("Statue") || other.CompareTag("Cofre") || other.CompareTag("Runa"))
+        if (other.CompareTag("Statue") || other.CompareTag("Cofre") || other.CompareTag("Runa") || other.CompareTag("Wizard"))
         {
             if(other.gameObject.name == "Cofre") //ojoal guardar escena y q no tenga el mismo nombr eel cofre
             {
@@ -118,6 +118,27 @@ public class dialogos : MonoBehaviour
                 else
                 {
                     indiceDialogoActual = 4;
+
+                    canvas.SetActive(true);
+                    MostrarDialogoActual();
+                }
+            }
+
+             if(other.gameObject.name == "Mago") //ojoal guardar escena y q no tenga el mismo nombr eel cofre
+            {
+              string keyToEvaluate = "Mago";
+                bool keyStatus = NarrativeManager.instance.GetPearl(keyToEvaluate);
+
+                if(keyStatus)
+                {
+                    indiceDialogoActual = 7;
+
+                    canvas.SetActive(true);
+                    MostrarDialogoActual();
+                }
+                else
+                {
+                    indiceDialogoActual = 6;
 
                     canvas.SetActive(true);
                     MostrarDialogoActual();
