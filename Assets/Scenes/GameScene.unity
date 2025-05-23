@@ -35469,7 +35469,7 @@ PrefabInstance:
     - target: {fileID: 1925814259248185950, guid: ef67ba864d1ecc042b5f4cf48455c0a6,
         type: 3}
       propertyPath: dialogosArray.Array.size
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1925814259248185950, guid: ef67ba864d1ecc042b5f4cf48455c0a6,
         type: 3}
@@ -35489,7 +35489,7 @@ PrefabInstance:
     - target: {fileID: 1925814259248185950, guid: ef67ba864d1ecc042b5f4cf48455c0a6,
         type: 3}
       propertyPath: dialogosArray.Array.data[6].texto
-      value: Muchas gracias por la llave!!
+      value: Necesito 3 llaves si quiero llegar a la princesa
       objectReference: {fileID: 0}
     - target: {fileID: 1925814259248185950, guid: ef67ba864d1ecc042b5f4cf48455c0a6,
         type: 3}
@@ -35514,7 +35514,7 @@ PrefabInstance:
     - target: {fileID: 1925814259248185950, guid: ef67ba864d1ecc042b5f4cf48455c0a6,
         type: 3}
       propertyPath: dialogosArray.Array.data[6].keyToEvaluate
-      value: Estatua
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5628018141983903104, guid: ef67ba864d1ecc042b5f4cf48455c0a6,
         type: 3}
@@ -35620,7 +35620,7 @@ MonoBehaviour:
   - {fileID: 1283299475}
   amuletIcon: {fileID: 782083223}
   HaveAmulet: 0
-  keySound: {fileID: 5628018140380570488}
+  HaveKeys: 0
 --- !u!82 &5628018140380570488
 AudioSource:
   m_ObjectHideFlags: 0
