@@ -1,0 +1,44 @@
+{
+  "Items": [
+    {
+      "Id": "Rock",
+      "Dialogues": [
+        {
+          "KeyToEvaluate": "HasKey",
+          "KeyStatus": false,
+          "Dialogues": [ "Rock/Hola, viajera.", "Player/Nos conocemos?" ]
+        },
+        {
+          "KeyToEvaluate": "HasKey",
+          "KeyStatus": false,
+          "Dialogues": [ "Rock/Te falta una llave...", "Rock/Volv� cuando lo tengas." ]
+        },
+        {
+          "KeyToEvaluate": "HasKey",
+          "KeyStatus": true,
+          "Dialogues": [ "Rock/Perfecto, gracias por la llave. Ahora vete.", "Player/Me hiciste venir al pedo" ]
+        }
+      ]
+    },
+    {
+      "Id": "Tree",
+      "Dialogues": [
+        {
+          "KeyToEvaluate": "DialogueWithTree",
+          "KeyStatus": false,
+          "Dialogues": [ "Tree/Hola, soy un texto que aparece una sola vez", "Player/AAAA un árbol que habla" ]
+        },
+        {
+          "KeyToEvaluate": "DialogueWithTree",
+          "KeyStatus": true,
+          "Dialogues": [ "Tree/Te dije que solo te hablaba una vez", "Tree/Dej� de hablar con los �rboles.", "Player/Bueno jijiji." ]
+        },
+        {
+          "KeyToEvaluate": "HasKey",
+          "KeyStatus": true,
+          "Dialogues": [ "Tree/asadsadsads", "Player/Bueno jijiji." ]
+        }
+      ]
+    }
+  ]
+}
