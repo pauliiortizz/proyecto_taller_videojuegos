@@ -83,8 +83,13 @@
 
             yield return new WaitUntil(() => clickToNextDialogue = true);
 
+             Debug.Log("Cerrar");
+
             if(!string.IsNullOrEmpty(keyWhenFinishDialogue)) //si tenemos key para activar al finalizar un dialogo..
+            {
                 NarrativeManager.SetKeyStatus(keyWhenFinishDialogue, true); //seteamos el status nuevo
+                Debug.Log("Key set to true: " + keyWhenFinishDialogue);
+            }
 
             HideDialog();
         }

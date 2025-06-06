@@ -11,6 +11,8 @@ TagManager:
   - Cofre
   - Runa
   - Wizard
+  - ObjectWithDialog
+  - Statuekey
   layers:
   - Default
   - TransparentFX

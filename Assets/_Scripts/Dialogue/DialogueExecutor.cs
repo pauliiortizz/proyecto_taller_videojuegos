@@ -15,7 +15,7 @@
 
         private void OnTriggerEnter2D(Collider2D collision)
         {
-            if (collision.tag == "Dialog") 
+            if (collision.tag == "ObjectWithDialog") 
             {
                 var objectWithDialogue = collision.GetComponent<ObjectWithDialogue>();
 

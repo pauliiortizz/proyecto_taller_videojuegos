@@ -27,9 +27,14 @@ namespace Dialogue
             var objectDialogues = _allDialogues.Find(dialogItem => dialogItem.Id == objectId);
             foreach (KeyDialogue keyDialogue in objectDialogues.Dialogues)
             {
-                bool keyStatus = NarrativeManager.GetKeyStatus(keyDialogue.KeyToEvaluate);
+                Status keyStatus = NarrativeManager.GetKeyStatus(keyDialogue.KeyToEvaluate);
 
-                if(keyStatus == keyDialogue.KeyStatus) //si la key tiene el mismo estado que la key a evaluar
+                if(keyStatus == Status.NULL) continue;
+
+                bool keyStatusValue = keyStatus == Status.TRUE ? true : false;
+
+
+                if(keyStatusValue == keyDialogue.KeyStatus) //si la key tiene el mismo estado que la key a evaluar
                 {
                     dialoguesToShow.AddRange(keyDialogue.Dialogues); //agrego todos los dialogos
                 }
@@ -52,35 +57,53 @@ namespace Dialogue
 
     public static class NarrativeManager //No es monobehaviour, no necesita estar instanciado en escena
     {
-        private static Dictionary<string, bool> KeyToStatus = new(); //inicializo sino queda nulo
+        private static Dictionary<string, Status> KeyToStatus = new(); //inicializo sino queda nulo
 
         public static void Initialize(HashSet<string> _allKeys)
         {
             foreach (string key in _allKeys)
             {
-                KeyToStatus.Add(key, false); //agrego todas las keys del json y las inicializo en false.
+                KeyToStatus.Add(key, Status.FALSE); //agrego todas las keys del json y las inicializo en false.
+            }
+        }
+
+        public static void DeleteKey(string key)
+        {
+            if (KeyToStatus.ContainsKey(key))
+            {
+                KeyToStatus.Remove(key);
             }
         }
 
         public static void SetKeyStatus(string key, bool newStatus)
         {
+            Status statusToShow = newStatus ? Status.TRUE : Status.FALSE;
+
             if (KeyToStatus.ContainsKey(key))
             {
-                KeyToStatus[key] = newStatus;
+                KeyToStatus[key] = statusToShow;
             }
         }
 
-        public static bool GetKeyStatus(string key)
+        public static Status GetKeyStatus(string key)
         {
-            if (KeyToStatus.TryGetValue(key, out bool status))
+            if (KeyToStatus.TryGetValue(key, out Status status))
             {
                 return status;
             }
             else
             {
-                throw new System.Exception($"No se encuentra una key con el nombre {key} en Dialogues.json");
+                //throw new System.Exception($"No se encuentra una key con el nombre {key} en Dialogues.json");
+                return Status.NULL;
             }
         }
+    }
+
+    public enum Status
+    {
+        TRUE,
+        FALSE,
+        NULL
     }
 }
 

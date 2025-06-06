@@ -1,42 +1,77 @@
 {
   "Items": [
     {
-      "Id": "Rock",
+      "Id": "Mago",
       "Dialogues": [
         {
-          "KeyToEvaluate": "HasKey",
+          "KeyToEvaluate": "DialogueWithMago",
           "KeyStatus": false,
-          "Dialogues": [ "Rock/Hola, viajera.", "Player/Nos conocemos?" ]
+          "Dialogues": [ "Mago/Hola, viajero.", "Elias/Nos conocemos?", "Mago/No, no nos conocemos, pero soy quien te llevará a la princesa.", "Elias/Bueno, dime como puedo llegar a ella", "Mago/Para llegar a la princesa, debes traerme 3 llaves magicas que se podras encontrar en este jardin.", "Elias/Bueno, volvere con esas llaves"]
         },
         {
-          "KeyToEvaluate": "HasKey",
-          "KeyStatus": false,
-          "Dialogues": [ "Rock/Te falta una llave...", "Rock/Volv� cuando lo tengas." ]
-        },
-        {
-          "KeyToEvaluate": "HasKey",
+          "KeyToEvaluate": "DialogueWithMago",
           "KeyStatus": true,
-          "Dialogues": [ "Rock/Perfecto, gracias por la llave. Ahora vete.", "Player/Me hiciste venir al pedo" ]
+          "Dialogues": [ "Mago/Todavia no tenes las llaves. Se va a morir la princesa por tu lentitud.", "Elias/Bueno, volvere con las llaves" ]
         }
       ]
     },
     {
-      "Id": "Tree",
+      "Id": "Runas",
       "Dialogues": [
         {
-          "KeyToEvaluate": "DialogueWithTree",
+          "KeyToEvaluate": "DialogueWithRunas",
           "KeyStatus": false,
-          "Dialogues": [ "Tree/Hola, soy un texto que aparece una sola vez", "Player/AAAA un árbol que habla" ]
+          "Dialogues": ["Elias/Estas runas en el suelo se ven raras", "Elias/Parece que se activan al pisarlas", "Elias/Tengo que encontrar algo que ponerles encima" ]
         },
         {
-          "KeyToEvaluate": "DialogueWithTree",
+          "KeyToEvaluate": "DialogueWithRunas",
           "KeyStatus": true,
-          "Dialogues": [ "Tree/Te dije que solo te hablaba una vez", "Tree/Dej� de hablar con los �rboles.", "Player/Bueno jijiji." ]
+          "Dialogues": [ "Elias/Tengo que encontrar algo que ponerles encima." ]
         },
         {
-          "KeyToEvaluate": "HasKey",
+          "KeyToEvaluate": "HasKeyRunas",
           "KeyStatus": true,
-          "Dialogues": [ "Tree/asadsadsads", "Player/Bueno jijiji." ]
+          "Dialogues": [ "Elias/Excelente, una llave" ]
+        }
+      ]
+    },
+    {
+      "Id": "Cofre",
+      "Dialogues": [
+        {
+          "KeyToEvaluate": "DialogueWithCofre",
+          "KeyStatus": false,
+          "Dialogues": ["Elias/Este cofre debe tener algo dentro", "Elias/Tengo que adivinar su contraseña" ]
+        },
+        {
+          "KeyToEvaluate": "DialogueWithCofre",
+          "KeyStatus": true,
+          "Dialogues": [ "Elias/Cual sera la contraseña?" ]
+        },
+        {
+          "KeyToEvaluate": "HasKeyCofre",
+          "KeyStatus": true,
+          "Dialogues": [ "Elias/Excelente, este cofre tenia una llave dentro"]
+        }
+      ]
+    },
+    {
+      "Id": "Statue",
+      "Dialogues": [
+        {
+          "KeyToEvaluate": "DialogueWithStatue",
+          "KeyStatus": false,
+          "Dialogues": [ "Stuate/Hola joven, necesito tu ayuda", "Elias/Ahhh que miedo, me asustaste", "Statue/No te asustes, no te voy a hacer nada, no me puedo mover", "Elias/Bueno, te voy a ayudar, que necesitas", "Statue/Necesito que me limpies que yo no puedo sola", "Elias/Bueno, te voy a ayudar, ahora busco algo para limpiarme"]
+        },
+        {
+          "KeyToEvaluate": "DialogueWithStatue",
+          "KeyStatus": true,
+          "Dialogues": [ "Statue/Encontraste algo para limpiarme?", "Elias/Todavia no, pero te voy a ayudar"]
+        },
+        {
+          "KeyToEvaluate": "HasAmulet",
+          "KeyStatus": true,
+          "Dialogues": [ "Elias/Ya encontre algo para limpiarte, quedate quieta", "Statue/Soy una estatua, no puedo moverme, pero gracias por limpiarme y toma esta llave." ]
         }
       ]
     }
