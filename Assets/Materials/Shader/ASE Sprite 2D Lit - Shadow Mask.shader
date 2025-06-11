@@ -190,7 +190,7 @@ Shader "Cainos/Pixel Art Top Down - Basic/Sprite 2D Lit - Shadow Mask"
 				InitializeSurfaceData(Color.rgb, Color.a, Mask, surfaceData);
 				InputData2D inputData;
 				InitializeInputData(IN.texCoord0.xy, half2(IN.screenPosition.xy / IN.screenPosition.w), inputData);
-				SETUP_DEBUG_DATA_2D(inputData, positionWS);
+				SETUP_DEBUG_DATA_2D(inputData, IN, positionWS);
 				return CombinedShapeLightShared(surfaceData, inputData);
 			}
 

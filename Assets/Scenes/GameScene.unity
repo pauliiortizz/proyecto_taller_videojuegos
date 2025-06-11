@@ -10350,6 +10350,11 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: -105541197
       objectReference: {fileID: 0}
+    - target: {fileID: 7947911505737750450, guid: d730038d263986f4dac93230e1dd62b0,
+        type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: db08d3fea153bd54490a836ab5654174, type: 2}
     - target: {fileID: 7947911505737750455, guid: d730038d263986f4dac93230e1dd62b0,
         type: 3}
       propertyPath: m_Name
@@ -29808,6 +29813,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4388970980716667289, guid: 359a6a25bec88d446bfc5f9e937ade4e,
+        type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 61af4b2f6ece83e46bbe88f1291b0415, type: 2}
     - target: {fileID: 5194528613795792995, guid: 359a6a25bec88d446bfc5f9e937ade4e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -34983,6 +34993,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 5602329015596567735, guid: 050004a7a2f3fcc45910c25250db2919,
         type: 3}
+    - target: {fileID: 8213560790180087828, guid: e06e2a2da0b8e014ea18ce61be25937d,
+        type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: db08d3fea153bd54490a836ab5654174, type: 2}
     - target: {fileID: 9046608442876432691, guid: e06e2a2da0b8e014ea18ce61be25937d,
         type: 3}
       propertyPath: m_IsTrigger
@@ -36400,6 +36415,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Box
       objectReference: {fileID: 0}
+    - target: {fileID: 8150476868300563374, guid: 2e2ac125e54a1e44780363d638b1df34,
+        type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: db08d3fea153bd54490a836ab5654174, type: 2}
     - target: {fileID: 8150476868300563375, guid: 2e2ac125e54a1e44780363d638b1df34,
         type: 3}
       propertyPath: m_RootOrder
