@@ -17,11 +17,13 @@ public class PlayerManager : MonoBehaviour
             Debug.Log("Amuleto recogido"); // Mensaje de depuración
             HaveAmulet = true; // Cambia la bandera a verdadero
             Dialogue.NarrativeManager.SetKeyStatus("HasAmulet", true);
+            Dialogue.NarrativeManager.DeleteKey("DialogueWithStatue");
         }
 
         if (collision.gameObject.CompareTag("Statuekey") && HaveAmulet)
         {
             amuletIcon.SetActive(false); // Oculta el amuleto en la UI
+           
             GiveKey(); // Llama a la función para dar la llave
             Debug.Log("Llave obtenida"); // Mensaje de depuración
             HaveAmulet = false; // Cambia la bandera a falso

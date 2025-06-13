@@ -41,6 +41,7 @@ namespace Cainos.PixelArtTopDown_Basic
                 {
                     player.GiveKey();
                     Dialogue.NarrativeManager.SetKeyStatus("HasKeyRunas", true);
+                    Dialogue.NarrativeManager.DeleteKey("DialogueWithRunas");
                 }
                 else
                 {
