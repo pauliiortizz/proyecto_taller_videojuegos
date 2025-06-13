@@ -1,0 +1,79 @@
+{
+  "Items": [
+    {
+      "Id": "Mago",
+      "Dialogues": [
+        {
+          "KeyToEvaluate": "DialogueWithMago",
+          "KeyStatus": false,
+          "Dialogues": [ "Mago/Hola, viajero.", "Elias/Nos conocemos?", "Mago/No, no nos conocemos, pero soy quien te llevará a la princesa.", "Elias/Bueno, dime como puedo llegar a ella", "Mago/Para llegar a la princesa, debes traerme 3 llaves magicas que se podras encontrar en este jardin.", "Elias/Bueno, volvere con esas llaves"]
+        },
+        {
+          "KeyToEvaluate": "DialogueWithMago",
+          "KeyStatus": true,
+          "Dialogues": [ "Mago/Todavia no tenes las llaves. Se va a morir la princesa por tu lentitud.", "Elias/Bueno, volvere con las llaves" ]
+        }
+      ]
+    },
+    {
+      "Id": "Runas",
+      "Dialogues": [
+        {
+          "KeyToEvaluate": "DialogueWithRunas",
+          "KeyStatus": false,
+          "Dialogues": ["Elias/Estas runas en el suelo se ven raras", "Elias/Parece que se activan al pisarlas", "Elias/Tengo que encontrar algo que ponerles encima" ]
+        },
+        {
+          "KeyToEvaluate": "DialogueWithRunas",
+          "KeyStatus": true,
+          "Dialogues": [ "Elias/Tengo que encontrar algo que ponerles encima." ]
+        },
+        {
+          "KeyToEvaluate": "HasKeyRunas",
+          "KeyStatus": true,
+          "Dialogues": [ "Elias/Excelente, una llave" ]
+        }
+      ]
+    },
+    {
+      "Id": "Cofre",
+      "Dialogues": [
+        {
+          "KeyToEvaluate": "DialogueWithCofre",
+          "KeyStatus": false,
+          "Dialogues": ["Elias/Este cofre debe tener algo dentro", "Elias/Tengo que adivinar su contraseña" ]
+        },
+        {
+          "KeyToEvaluate": "DialogueWithCofre",
+          "KeyStatus": true,
+          "Dialogues": [ "Elias/Cual sera la contraseña?" ]
+        },
+        {
+          "KeyToEvaluate": "HasKeyCofre",
+          "KeyStatus": true,
+          "Dialogues": [ "Elias/Excelente, este cofre tenia una llave dentro"]
+        }
+      ]
+    },
+    {
+      "Id": "Statue",
+      "Dialogues": [
+        {
+          "KeyToEvaluate": "DialogueWithStatue",
+          "KeyStatus": false,
+          "Dialogues": [ "Stuate/Hola joven, necesito tu ayuda", "Elias/Ahhh que miedo, me asustaste", "Statue/No te asustes, no te voy a hacer nada, no me puedo mover", "Elias/Bueno, te voy a ayudar, que necesitas", "Statue/Necesito que me limpies que yo no puedo sola", "Elias/Bueno, te voy a ayudar, ahora busco algo para limpiarme"]
+        },
+        {
+          "KeyToEvaluate": "DialogueWithStatue",
+          "KeyStatus": true,
+          "Dialogues": [ "Statue/Encontraste algo para limpiarme?", "Elias/Todavia no, pero te voy a ayudar"]
+        },
+        {
+          "KeyToEvaluate": "HasAmulet",
+          "KeyStatus": true,
+          "Dialogues": [ "Elias/Ya encontre algo para limpiarte, quedate quieta", "Statue/Soy una estatua, no puedo moverme, pero gracias por limpiarme y toma esta llave." ]
+        }
+      ]
+    }
+  ]
+}

@@ -7,10 +7,12 @@ TagManager:
   - Amulet
   - Statue
   - Box
-  - Wizard
   - Dialog
   - Cofre
   - Runa
+  - Wizard
+  - ObjectWithDialog
+  - Statuekey
   layers:
   - Default
   - TransparentFX

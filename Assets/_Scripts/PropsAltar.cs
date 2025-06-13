@@ -40,7 +40,8 @@ namespace Cainos.PixelArtTopDown_Basic
                 if (player != null) // Verificar que player no sea null
                 {
                     player.GiveKey();
-                    NarrativeManager.instance.SetPearl("Runas", true);
+                    Dialogue.NarrativeManager.SetKeyStatus("HasKeyRunas", true);
+                    Dialogue.NarrativeManager.DeleteKey("DialogueWithRunas");
                 }
                 else
                 {

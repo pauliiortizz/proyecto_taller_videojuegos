@@ -20,10 +20,11 @@ public class PlayerManager : MonoBehaviour
             Destroy(collision.gameObject); // Destruye el objeto amuleto recogido
             Debug.Log("Amuleto recogido"); // Mensaje de depuración
             HaveAmulet = true; // Cambia la bandera a verdadero
-            NarrativeManager.instance.SetPearl("Estatua", true);
+            Dialogue.NarrativeManager.SetKeyStatus("HasAmulet", true);
+            Dialogue.NarrativeManager.DeleteKey("DialogueWithStatue");
         }
 
-        if (collision.gameObject.CompareTag("Statue") && HaveAmulet)
+        if (collision.gameObject.CompareTag("Statuekey") && HaveAmulet)
         {
             amuletIcon.SetActive(false); //Oculta el amuleto en la UI
             GiveKey(); // Llama a la función para dar la llave
